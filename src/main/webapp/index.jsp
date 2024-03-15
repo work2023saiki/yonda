@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>yonda！</title>
 </head>
 <body>
-<p>よんだyonda！</p>
+<h1>yonda！トップページ</h1>
+<a href="login.jsp">ログイン</a><br>
+<a href="accountEntry.jsp">アカウントをお持ちでない方はこちら</a>
 </body>
 </html>
