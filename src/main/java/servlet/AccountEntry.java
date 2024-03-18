@@ -22,7 +22,7 @@ public class AccountEntry extends HttpServlet {
     // リクエストパラメータをチェック
     String errorMsg = "";
     if (name == null || name.length() == 0) {
-      errorMsg += "名前が入力されていません<br>";
+      errorMsg += "名前が入力されていませんよ<br>";
     }
     if (password == null || password.length() == 0) {
       errorMsg += "パスワードが選択されていません<br>";
