@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>アカウント新規登録</h1>
-<form action="Formservlet" method="post">
+<form action="AccountEntry" method="post">
 ユーザー名：<input type="text" name="name"><br>
 パスワード：<input type="password" name="password"><br>
 メールアドレス：<input type="text" name="mailAd"><br>
