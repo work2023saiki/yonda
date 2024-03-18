@@ -8,6 +8,9 @@
 </head>
 <body>
 <h1>yonda！トップページ</h1>
+<a href="bbs.jsp">掲示板</a><br>
+<a href="hontaiNews.jsp">本屋大賞通信</a>
+<br>
 <a href="login.jsp">ログイン</a><br>
 <a href="accountEntry.jsp">アカウントをお持ちでない方はこちら</a>
 </body>
