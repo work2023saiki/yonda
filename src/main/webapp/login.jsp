@@ -11,7 +11,8 @@
 <form action="Login" method="post">
 ユーザー名：<input type="text" name="name"><br>
 パスワード：<input type="password" name="pass"><br>
-<input type="submit" value="ログイン">
+<input type="submit" value="ログイン"><br>
+<a href="rePass.jsp">パスワードを忘れた場合はこちら</a><br>
 </form>
 </body>
 </html>
