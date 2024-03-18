@@ -10,6 +10,6 @@
 <h1>パスワード再設定完了</h1>
 <p>パスワード再設定が完了しました</p>
 <a href="index.jsp">トップページ</a><br>
-<a href="login.jsp">ログアウト</a><br>
+<a href="login.jsp">ログイン</a><br>
 </body>
 </html>
