@@ -21,7 +21,7 @@ public class LoginLogic {
 	  
 	  //System.out.println(account.getPassword());
 	  
-    if ((account.getPassword()).equals(empList.get(0).getPassword())) { return true; }
+    if ((account.getPassword()).equals(empList.get(0).getPassword()) && (account.getName()).equals(empList.get(0).getName())) { return true; }
       return false;
   }
 }
