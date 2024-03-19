@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>ログイン</title>
+<title>読書記録</title>
 </head>
 <body>
 <header>
@@ -18,13 +18,25 @@
 	</div>
 </header>
 
-<h1>yonda！へログイン</h1>
-<form action="Login" method="post">
-ユーザー名：<input type="text" name="name"><br>
-パスワード：<input type="password" name="pass"><br>
-<input type="submit" value="ログイン"><br>
-<a href="rePassId.jsp">パスワードを忘れた場合はこちら</a><br>
-<a href="index.jsp">トップページ</a><br>
-</form>
+<h1>読書記録</h1>
+<p>タイトル1<br>
+作者、出版社<br>
+ジャンル<br>
+媒体<br>
+金額<br>
+版数<br>
+訳者<br>
+感想<br>
+入手日<br>
+開始日<br>
+終了日<br>
+回数<br>
+読書状況<br>
+メモ<br>
+公開</p>
+<input type="submit" value="編集"><br>
+<a href="bookShelf.jsp">本棚</a><br>
+<a href="myPage.jsp">マイページ</a><br>
+<a href="logout.jsp">ログアウト</a><br>
 </body>
 </html>

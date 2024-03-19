@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>マイページ</title>
+<title>本棚</title>
 </head>
 <body>
 <header>
@@ -18,15 +18,17 @@
 	</div>
 </header>
 
-<h1>マイページ</h1>
-<a href="bookShelf.jsp">本棚</a><br>
+<h1>本棚</h1>
+<form action="???" method="post">　<%-- getか？ --%>
+<input type="text" name="serch">
+<input type="submit" value="検索"><br>
+<p>読書記録の一覧<br>
+<p>タイトル1　作者1<br>
+<p>タイトル2　作者2<br>
+<p>タイトル3　作者3<br>
+<p>タイトル4　作者4</p>
 <a href="profile.jsp">プロフィール</a><br>
-<p>読書状況</p>
-<p>ランキング</p>
-<p>読みたい本</p>
-<p>友達の口コミ</p>
-<p>自分宛のいいね</p>
-<a href="index.jsp">トップページ</a><br>
+<a href="myPage.jsp">マイページ</a><br>
 <a href="logout.jsp">ログアウト</a><br>
 </body>
 </html>
