@@ -19,10 +19,18 @@ public class AccountEntry extends HttpServlet {
     String name = request.getParameter("name");
     String password = request.getParameter("password");
 
+    
+    /*AccountDAO empDAO = new AccountDAO();
+    try {
+        int result = empDAO.insertBook(title, price);
+    } catch (SQLException | ClassNotFoundException e) {
+        e.printStackTrace();
+    */
+    
     // リクエストパラメータをチェック
     String errorMsg = "";
     if (name == null || name.length() == 0) {
-      errorMsg += "名前が入力されていませんよ<br>";
+      errorMsg += "名前が入力されていません<br>";
     }
     if (password == null || password.length() == 0) {
       errorMsg += "パスワードが選択されていません<br>";
