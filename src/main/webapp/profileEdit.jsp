@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>マイページ</title>
+<title>プロフィールの編集</title>
 </head>
 <body>
 <header>
@@ -18,15 +18,20 @@
 	</div>
 </header>
 
-<h1>マイページ</h1>
+<h1>プロフィールの編集</h1>
+<p>アカウント名1<br>
+性別<br>
+生年月日<br>
+職業<br>
+在住都道府県<br>
+パーソナルタグ<br>
+興味のあるジャンル<br>
+好きな作家<br>
+お気に入りの本ベスト3</p>
+<input type="submit" value="保存"><br>
+<a href="profile.jsp">プロフィールに戻る</a><br>
 <a href="bookShelf.jsp">本棚</a><br>
-<a href="profile.jsp">プロフィール</a><br>
-<p>読書状況</p>
-<p>ランキング</p>
-<p>読みたい本</p>
-<p>友達の口コミ</p>
-<p>自分宛のいいね</p>
-<a href="index.jsp">トップページ</a><br>
+<a href="myPage.jsp">マイページ</a><br>
 <a href="logout.jsp">ログアウト</a><br>
 </body>
 </html>

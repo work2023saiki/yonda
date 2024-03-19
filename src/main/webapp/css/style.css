@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+header{
+	background-color: #E8E8FF;
+	height: 100px;
+	}
+.header-list li {
+	list-style: none;
+	float: left;
+	padding: 35px 20px;
+	}
+
+.header-logo {
+	font-weight: bold;
+	font-size: 30px;
+	float: left;
+	padding: 30px 40px;
+	}
+
+body{background-color:#FFFFE9 ;}

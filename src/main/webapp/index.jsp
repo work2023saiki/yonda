@@ -4,13 +4,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/style.css">
 <title>yonda！</title>
 </head>
 <body>
-<h1>yonda！トップページ</h1>
-<a href="bbs.jsp">掲示板</a><br>
-<a href="hontaiNews.jsp">本屋大賞通信</a>
-<br>
+<header>
+	<div class="header-logo">yonda！</div>
+	<div class="header-list">
+		<ul>
+		<li><a href="bbs.jsp">掲示板</a></li>
+		<li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
+		</ul>
+	</div>
+</header>
+
+<h1>トップページ</h1>
 <a href="login.jsp">ログイン</a><br>
 <a href="accountEntry.jsp">アカウントをお持ちでない方はこちら</a>
 </body>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>マイページ</title>
+<title>読書記録の編集</title>
 </head>
 <body>
 <header>
@@ -18,15 +18,26 @@
 	</div>
 </header>
 
-<h1>マイページ</h1>
+<h1>読書記録の編集</h1>
+<p>タイトル1<br>
+作者、出版社<br>
+ジャンル<br>
+媒体<br>
+金額<br>
+版数<br>
+訳者<br>
+感想<br>
+入手日<br>
+開始日<br>
+終了日<br>
+回数<br>
+読書状況<br>
+メモ<br>
+公開</p>
+<input type="submit" value="保存"><br>
+<a href="readingRec.jsp">読書記録に戻る</a><br>
 <a href="bookShelf.jsp">本棚</a><br>
-<a href="profile.jsp">プロフィール</a><br>
-<p>読書状況</p>
-<p>ランキング</p>
-<p>読みたい本</p>
-<p>友達の口コミ</p>
-<p>自分宛のいいね</p>
-<a href="index.jsp">トップページ</a><br>
+<a href="myPage.jsp">マイページ</a><br>
 <a href="logout.jsp">ログアウト</a><br>
 </body>
 </html>
