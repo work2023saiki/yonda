@@ -26,16 +26,7 @@ public class AccountEntry extends HttpServlet {
     } catch (SQLException | ClassNotFoundException e) {
         e.printStackTrace();
     */
-    
-    // リクエストパラメータをチェック
-    String errorMsg = "";
-    if (name == null || name.length() == 0) {
-      errorMsg += "名前が入力されていません<br>";
-    }
-    if (password == null || password.length() == 0) {
-      errorMsg += "パスワードが選択されていません<br>";
-    } 
-    
+        
     
     RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/accountResult.jsp");
     dispatcher.forward(request, response);

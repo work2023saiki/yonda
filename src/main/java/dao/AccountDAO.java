@@ -16,13 +16,14 @@ public class AccountDAO {
   // データベース接続に使用する情報
   private final String JDBC_URL = "jdbc:mysql://localhost:3306/yonda";
   private final String DB_USER = "root";
-  private final String DB_PASS = "adminadmin";
+  private final String DB_PASS = "moo0921too";
 
   public List<Account> findAll() {
     List<Account> empList = new ArrayList<Account>();
     //JDBCドライバを読み込む
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
+        System.out.println("JDBCドライバを読み込めました");
     } catch (ClassNotFoundException e) {
         throw new IllegalStateException("JDBCドライバを読み込めませんでした");
     }
@@ -31,7 +32,7 @@ public class AccountDAO {
     try (Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
 
       // SELECT文を準備
-      String sql = "SELECT アカウントID, アカウント名, パスワード, メールアドレス, 秘密の質問, プロフィールID  FROM アカウント";
+      String sql = "SELECT アカウントID, アカウント名, パスワード, メールアドレス, 秘密の質問, プロフィールID FROM アカウント";
       PreparedStatement pStmt = conn.prepareStatement(sql);
 
       // SELECTを実行し、結果表を取得
@@ -48,8 +49,8 @@ public class AccountDAO {
         int profileID = rs.getInt("プロフィールID");
         Account account = new Account(id, name, password, mailAd, secret_q, profileID);
         empList.add(account);
+        
       }
-      
       
     } catch (SQLException e) {
       e.printStackTrace();

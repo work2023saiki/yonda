@@ -13,7 +13,17 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.33.jar">
+	<classpathentry kind="lib" path="C:/pleiades/2023-12/workspace/yonda2/src/main/webapp/WEB-INF/lib/mysql-connector-j-8.0.33.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-3.0.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-3.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

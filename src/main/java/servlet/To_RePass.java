@@ -16,17 +16,9 @@ public class To_RePass extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // リクエストパラメータを取得
     request.setCharacterEncoding("UTF-8");
-    String name = request.getParameter("name");
-    String password = request.getParameter("password");
+    //String name = request.getParameter("name");
+    //String password = request.getParameter("password");
 
-    // リクエストパラメータをチェック
-    String errorMsg = "";
-    if (name == null || name.length() == 0) {
-      errorMsg += "名前が入力されていませんよ<br>";
-    }
-    if (password == null || password.length() == 0) {
-      errorMsg += "パスワードが選択されていません<br>";
-    } 
     
     
     RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/rePass.jsp");
