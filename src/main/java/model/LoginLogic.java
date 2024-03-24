@@ -5,14 +5,14 @@ package model;
 
 import java.util.List;
 
-import dao.AccountDAO;
+import dao.LoginDAO;
 
 
 
 public class LoginLogic {
   public boolean execute(Account account) {
-	  AccountDAO accountDAO = new AccountDAO();
-	  List<Account> accountID = accountDAO.findAccount(account);
+	  LoginDAO loginDAO = new LoginDAO();
+	  List<Account> accountID = loginDAO.findAccount(account);
 	  
     if (accountID.isEmpty()) { return false; }   //ログイン失敗のとき
       return true;      //ログイン成功のとき
