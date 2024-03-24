@@ -12,7 +12,7 @@ import java.util.List;
 
 import model.Account;
 
-public class AccountDAO {
+public class LoginDAO {
   // データベース接続に使用する情報
   private final String JDBC_URL = "jdbc:mysql://localhost:3306/yonda";
   private final String DB_USER = "root";
