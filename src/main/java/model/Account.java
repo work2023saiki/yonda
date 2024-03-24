@@ -26,13 +26,15 @@ public class Account {
 	    this.password = password;
 	    
 	  }
-  
+  //ログイン用
+  public Account(int accountID) {
+	    this.accountID = accountID;
+	  }
   
   
   public int getAccountId() { return accountID; }
   public String getName() { return name; }  
   public String getPassword() { return password; }
-  
   public String getMailAd() { return mailAd; }
   public String getSecret_q() { return secret_q; }
   public int getAge() { return profileID; }
