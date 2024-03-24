@@ -10,13 +10,12 @@ public class Account {
   private String secret_q;
   private int profileID;
 
-  public Account(int accountID, String name, String password, String mailAd, String secret_q, int profileID) {
-    this.accountID = accountID;
+  //アカウント登録用
+  public Account(String name, String password, String mailAd, String secret_q) {
     this.name = name;
     this.password = password;
     this.mailAd = mailAd;
     this.secret_q = secret_q;
-    this.profileID = profileID;
     
   }
   
