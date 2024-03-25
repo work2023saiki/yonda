@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 
+import beans.AccountBean;
 import dao.AccountEntryDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -9,7 +10,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Account;
 
 @WebServlet("/AccountEntry")
 public class AccountEntry extends HttpServlet {
@@ -24,14 +24,10 @@ public class AccountEntry extends HttpServlet {
     String secret_q = request.getParameter("secret_q");
     
     //Accountインスタンスaccountに入力内容を保存
-    Account account = new Account(name, password, mailAd, secret_q);
+    AccountBean account = new AccountBean(name, password, mailAd, secret_q);
     
     AccountEntryDAO dao = new AccountEntryDAO();
-	if(dao.create(account)) {
-		
-	};
-    
-    
+	//if(dao.create(account)) {};
     RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/accountResult.jsp");
     dispatcher.forward(request, response);
 

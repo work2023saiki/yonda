@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Account;
+import beans.AccountBean;
 
 public class LoginDAO {
   // データベース接続に使用する情報
@@ -19,9 +19,9 @@ public class LoginDAO {
   private final String DB_PASS = "moo0921too";
 
   
-  public List<Account> findAccount(Account account) {
+  public List<AccountBean> findAccount(AccountBean account) {
 	  
-    List<Account> accountList = new ArrayList<>();
+    List<AccountBean> accountList = new ArrayList<>();
 	//JDBCドライバを読み込む
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -51,17 +51,17 @@ public class LoginDAO {
 	      // empListに追加
 	      while (rs.next()) {
 	        int ID = rs.getInt("アカウントID");
-	        Account account2 = new Account(ID);
+	        AccountBean account2 = new AccountBean(ID);
 	        accountList.add(account2);
 	      }
     }  
-      //try文の中でエラーが出たとき実行する
+      //tryの中でエラーが出たら、catchのみ実行する
     catch (SQLException e) {
       e.printStackTrace();
       return null;
     }
     
-    //アカウントIDを取得できたとき
-    return accountList;
+  //アカウントIDを取得できたとき
+  return accountList;
   }
 }
