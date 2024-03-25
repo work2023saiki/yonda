@@ -19,14 +19,7 @@ public class To_RePassResult extends HttpServlet {
     String name = request.getParameter("name");
     String password = request.getParameter("password");
 
-    // リクエストパラメータをチェック
-    String errorMsg = "";
-    if (name == null || name.length() == 0) {
-      errorMsg += "名前が入力されていませんよ<br>";
-    }
-    if (password == null || password.length() == 0) {
-      errorMsg += "パスワードが選択されていません<br>";
-    } 
+    
     
     
     RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/rePass.jsp");

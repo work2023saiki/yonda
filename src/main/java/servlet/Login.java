@@ -1,3 +1,5 @@
+//「スッキリわかるサーブレット＆JSP入門」P279のコード10-5を参考
+
 package servlet;
 
 import java.io.IOException;
@@ -18,41 +20,29 @@ public class Login extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // リクエストパラメータを取得
     request.setCharacterEncoding("UTF-8");
-    String name2 = request.getParameter("name");
-    String password2 = request.getParameter("pass");
-    System.out.println(name2);
- // Accountテーブルの全レコードを取得
-    //AccountDAO empDAO = new AccountDAO();
-    //List<Account> empList = empDAO.findAll();
-
+    String name = request.getParameter("name");
+    String password = request.getParameter("pass");
     
-    Account account = new Account(name2, password2);
-    account.setName(name2);
-    account.setPassword(password2);
+  
+    Account account = new Account(name, password);
+  
     
-    
-    System.out.println(account.getPassword());
-    
-
     // ログイン処理
     LoginLogic loginLogic = new LoginLogic();
     boolean isLogin = loginLogic.execute(account);
-    
-    
-    
-    
-    // リクエストパラメータをチェック
-    /*String errorMsg = "";
-    if (name == null || name.length() == 0) {
-      errorMsg += "名前が入力されていません<br>";
-    }
-    if (password == null || password.length() == 0) {
-      errorMsg += "パスワードが選択されていません<br>";
-    } 
-    */
+     
+   
     if (isLogin) {
-      RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/myPage.jsp");
-      dispatcher.forward(request, response);
+      //RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/myPage.jsp");
+      //dispatcher.forward(request, response);       // URLがMyPageにならない、フォワードはjspフォルダ内に置く
+    	
+    	response.sendRedirect("http://localhost:8080/yonda/myPage.jsp");    //リダイレクトはWEB-INF直下に置く
+    
     }
-   }
+    else {
+    	RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/login.jsp");
+        dispatcher.forward(request, response);
+    	
+    }
+  }
 }

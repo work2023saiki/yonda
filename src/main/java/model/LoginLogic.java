@@ -1,27 +1,20 @@
+//「スッキリわかるサーブレット＆JSP入門」P279のコード10-4を参考
+// https://teratail.com/questions/81694  ←メソッドisEmpty()を参考
+
 package model;
 
 import java.util.List;
 
-import dao.AccountDAO;
+import dao.LoginDAO;
 
 
 
 public class LoginLogic {
-	/*public static void main(String[] args) {
-	    // Accountテーブルの全レコードを取得
-	    AccountDAO empDAO = new AccountDAO();
-	    List<Account> empList = empDAO.findAll();
-	    //System.out.println(empList.get(0).getPassword());   //11表示される
-	    
-	    
-	}*/
   public boolean execute(Account account) {
-	  AccountDAO empDAO = new AccountDAO();
-	  List<Account> empList = empDAO.findAll();
+	  LoginDAO loginDAO = new LoginDAO();
+	  List<Account> accountID = loginDAO.findAccount(account);
 	  
-	  //System.out.println(account.getPassword());
-	  
-    if ((account.getPassword()).equals(empList.get(0).getPassword()) && (account.getName()).equals(empList.get(0).getName())) { return true; }
-      return false;
+    if (accountID.isEmpty()) { return false; }   //ログイン失敗のとき
+      return true;      //ログイン成功のとき
   }
 }
