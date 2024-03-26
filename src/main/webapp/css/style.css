@@ -1,20 +1,165 @@
 @charset "UTF-8";
 
-header{
-	background-color: #E8E8FF;
-	height: 100px;
-	}
-.header-list li {
-	list-style: none;
-	float: left;
-	padding: 35px 20px;
-	}
+/* 画面全体
+—----------------------------- */
+* {
+   box-sizing: border-box;
+}
 
-.header-logo {
-	font-weight: bold;
-	font-size: 30px;
-	float: left;
-	padding: 30px 40px;
-	}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F3F6C8;
+  font-size: 14px;
+  color: #4b4b4b;
+}
+/* —--------------------------- */
 
-body{background-color:#FFFFE9 ;}
+
+/* ヘッダー
+—----------------------------- */
+header {
+  width: 100%;/*横幅をいっぱいにする*/
+  padding: 30px 4% 10px;/*header内側の余白を調整*/
+  background-color:#fff ;
+  position: fixed;/*絶対位置で場所を指定*/
+  top: 0;/*1番上(topから0距離)に固定*/
+  display: flex;/*header直下の子要素(h1とnav)をコントロールできる状態*/
+  align-items: center;/*子要素の縦方向の位置*/
+}
+
+  /*タイトルの文字サイズと余白を調整*/
+  h1 {
+    margin: 0; padding: 0;
+    font-size: 20px;
+  }
+
+  /*aタグ（リンク）の見た目を調整*/
+  a {
+    text-decoration: none;
+    color: #4b4b4b;
+  }
+
+  /*リストタグ「ul li」の見た目を調整*/
+  ul {
+    list-style: none;
+    margin: 0;
+    display: flex; /*各項目を横並び*/
+  }
+
+  /*「li」要素の余白と文字サイズを調整*/
+  li {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+  }
+
+  /*nav要素の外側の余白を調整*/
+  nav {
+     margin: 0 0 0 auto; /*左をautoにして右寄せ*/
+  }
+/* —--------------------------- */
+
+/* メインエリア（ヘッダーに隠れないように）
+—----------------------------- */
+main {
+  margin: 100px 50px; /* 上下100px、左右50pxの空白 */
+  background-color:#F3F6C8; /* 確認時は#fff、#F3F6C8に戻す */
+}
+/* —--------------------------- */
+
+/* 中央揃えのコンテナ
+—----------------------------- */
+.center-container {
+  padding:50px 100px;
+  background-color:#F3F6C8; /*確認時は#EA9C1B、#F3F6C8に戻すこと*/
+  text-align: center;
+}
+/* —--------------------------- */
+
+/* トップページのアイコン用エリア
+—----------------------------- */
+.home-icon {
+  display: flex;
+  justify-content: center;/*横並びの要素を両端揃えで均等に配置 */
+  max-width: 100px; /* 画像の最大幅 */
+  max-height: 100px; /* 画像の最大高さ */
+  margin:0 auto 40px;
+}
+
+.home-icon img {
+  width: 100%; /* 画像を親要素に収める */
+  height: auto; /* アスペクト比を維持 */
+  margin:0 10px;
+}
+/* —--------------------------- */
+
+/* 認証関連のコンテナ
+—----------------------------- */
+.cert-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px; /* 最大幅を600pxに設定 */
+  margin: 0 auto; /* 水平方向に中央揃え */
+}
+
+.input-field {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.cert-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: #5F685A;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cert-btn:hover {
+  background-color: #919B8C;
+}
+/* —--------------------------- */
+
+/* 本屋大賞通信
+—----------------------------- */
+.news-content {
+  width:80%;
+  background-color: #fff;
+  padding: 10px;
+  margin:20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.news-content:hover {
+  background-color: #919B8C;
+}
+/* —--------------------------- */
+
+/* ボタン
+—----------------------------- */
+.btn {
+  display: inline-block;
+  background: #5F685A; /* 背景色 */
+  color: #fff; /* 文字色 */
+  padding: 16px 40px; /* 上下の余白、左右の余白 */
+  margin: 10px;
+  text-decoration: none; /* デフォルトで入るリンクの下線を消す */
+  border-radius: 30px; /* 角を丸くする */
+}
+
+.btn:hover {
+  background-color: #919B8C;
+}
+/* —--------------------------- */

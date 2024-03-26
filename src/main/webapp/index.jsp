@@ -25,9 +25,9 @@
     <div class="center-container">
       <p>読書がもっと好きになる</P>
       <div class="home-icon">
-        <img src="./img/nokosu.jpg" alt="記録">
-        <img src="./img/sagasu.jpg" alt="検索">
-        <img src="./img/tsunagaru.jpg" alt="フォロー">
+        <img src="./img/nokosu.png" alt="記録">
+        <img src="./img/sagasu.png" alt="検索">
+        <img src="./img/tsunagaru.png" alt="フォロー">
       </div>
       <p>
         <a href="login.jsp" class="btn">ログイン</a>
