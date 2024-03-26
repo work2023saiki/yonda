@@ -5,23 +5,29 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>パスワード再設定</title>
+<title>yonda！</title>
 </head>
-<body>
-<header>
-	<div class="header-logo">yonda！</div>
-	<div class="header-list">
-		<ul>
-		<li><a href="bbs.jsp">掲示板</a></li>
-		<li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
-		</ul>
-	</div>
-</header>
 
-<h1>パスワード再設定</h1>
-<form action="Formservlet" method="post">
-パスワード：<input type="password" name="password"><br>
-<input type="submit" value="設定">
-</form>
-</body>
+<body>
+  <header>
+    <h1>
+      <a href="index.jsp">yonda！</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="bbs.jsp">掲示板</a></li>
+        <li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="cert-container">
+      <h2>パスワードの再設定</h2>
+      <form action="Formservlet" method="post">
+        <input type="password" name="password" class="input-field" placeholder="新しいパスワード">
+        <input type="password" name="password" class="input-field" placeholder="新しいパスワードの確認"><br>
+        <button type="submit" class="cert-btn">OK</button>
+    </div>
+  </main>
+  </body>
 </html>
