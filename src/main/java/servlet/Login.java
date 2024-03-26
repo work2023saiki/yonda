@@ -22,7 +22,7 @@ public class Login extends HttpServlet {
     // 入力した名前、パスワードを取得
     request.setCharacterEncoding("UTF-8");
     String name = request.getParameter("name");
-    String password = request.getParameter("pass");
+    String password = request.getParameter("password");
     
     //LoginDAO.javaでname、passwordを使うため、accountに保存。
     AccountBean account = new AccountBean(name, password);
@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
 	
 	// ログイン失敗のとき
 	if (accountID.isEmpty()) { 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/login.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/loginFailure.jsp");
         dispatcher.forward(request, response);   //フォワードはjspフォルダ内に置く
 	}   
 	
