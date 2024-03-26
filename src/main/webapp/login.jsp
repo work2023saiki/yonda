@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +28,11 @@
         <input type="text" name="name" class="input-field" placeholder="ユーザ名">
         <input type="password" name="password" class="input-field" placeholder="パスワード"><br>
         <button type="submit" class="cert-btn">OK</button>
+      </form>
+      <br>
+      <a href="rePassId.jsp">パスワードを忘れた場合はこちら</a>
     </div>
-    <a href="rePassId.jsp">パスワードを忘れた場合はこちら</a>
+    
   </main>
   </body>
 </html>
