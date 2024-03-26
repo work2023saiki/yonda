@@ -33,7 +33,7 @@ public class AccountEntry extends HttpServlet {
 	}
 	
 	else {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/accountEntry.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/accountEntryFailure.jsp");
         dispatcher.forward(request, response);
     }
 	

@@ -40,7 +40,7 @@ public class RePassId extends HttpServlet {
 	
 	// ログイン失敗のとき
 	if (accountID.isEmpty()) { 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/rePassId.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/rePassIdFailure.jsp");
         dispatcher.forward(request, response);   //フォワードはjspフォルダ内に置く
 	}   
 	
