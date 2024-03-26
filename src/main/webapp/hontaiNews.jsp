@@ -22,7 +22,6 @@
     </nav>
   </header>
   <main>
-  	<div class="center-container">
     <h2>本屋大賞通信</h2>
       <div class="news-content">2024年本屋大賞のノミネート発表</div>
       <div class="news-content">二次投票は2月29日まで（投票者限定）</div>
@@ -30,7 +29,6 @@
       <div class="news-content">2024年本屋大賞フェア 全国書店さんにて開催中！</div>
       <div class="news-content">「本屋大賞」の呼称とロゴマークについて</div>
       <div class="news-content">本屋大賞サポータ・賛助会員募集</div>
-    </div>
   </main>
   </body>
 </html>
