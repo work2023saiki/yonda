@@ -1,26 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>本屋大賞通信</title>
+<title>yonda！</title>
 </head>
-<body>
-<header>
-	<div class="header-logo">yonda！</div>
-	<div class="header-list">
-		<ul>
-		<li><a href="bbs.jsp">掲示板</a></li>
-		<li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
-		</ul>
-	</div>
-</header>
 
-<h1>本屋大賞通信</h1>
-<p>本屋大賞からのお知らせ</p>
-<a href="login.jsp">ログイン</a><br>
-<a href="index.jsp">トップページ</a><br>
-</body>
+<body>
+  <header>
+    <h1>
+      <a href="index.jsp">yonda！</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="bbs.jsp">掲示板</a></li>
+        <li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>本屋大賞通信</h2>
+      <div class="news-content">2024年本屋大賞のノミネート発表</div>
+      <div class="news-content">二次投票は2月29日まで（投票者限定）</div>
+      <div class="news-content">2024年本屋大賞フェア 拡材 ダウンロードはこちら</div>
+      <div class="news-content">2024年本屋大賞フェア 全国書店さんにて開催中！</div>
+      <div class="news-content">「本屋大賞」の呼称とロゴマークについて</div>
+      <div class="news-content">本屋大賞サポータ・賛助会員募集</div>
+  </main>
+  </body>
 </html>

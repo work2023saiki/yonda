@@ -5,26 +5,30 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>ログイン</title>
+<title>yonda！</title>
 </head>
-<body>
-<header>
-	<div class="header-logo">yonda！</div>
-	<div class="header-list">
-		<ul>
-		<li><a href="bbs.jsp">掲示板</a></li>
-		<li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
-		</ul>
-	</div>
-</header>
 
-<h1>yonda！へログイン</h1>
-<form action="Login" method="post">
-ユーザー名：<input type="text" name="name"><br>
-パスワード：<input type="password" name="pass"><br>
-<input type="submit" value="ログイン"><br>
-<a href="rePassId.jsp">パスワードを忘れた場合はこちら</a><br>
-<a href="index.jsp">トップページ</a><br>
-</form>
-</body>
+<body>
+  <header>
+    <h1>
+      <a href="index.jsp">yonda！</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="bbs.jsp">掲示板</a></li>
+        <li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="cert-container">
+      <h2>ログイン</h2>
+      <form action="Login" method="post">
+        <input type="text" name="name" class="input-field" placeholder="ユーザ名">
+        <input type="password" name="password" class="input-field" placeholder="パスワード"><br>
+        <button type="submit" class="cert-btn">OK</button>
+    </div>
+    <a href="rePassId.jsp">パスワードを忘れた場合はこちら</a>
+  </main>
+  </body>
 </html>
