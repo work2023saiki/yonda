@@ -9,9 +9,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #F3F6C8;
+  background-color: #F9B519;
   font-size: 14px;
-  color: #4b4b4b;
+  color: #293037;
 }
 /* —--------------------------- */
 
@@ -63,7 +63,7 @@ header {
 —----------------------------- */
 main {
   margin: 100px 50px; /* 上下100px、左右50pxの空白 */
-  background-color:#F3F6C8; /* 確認時は#fff、#F3F6C8に戻す */
+  background-color:#F9B519; /* 確認時は#fff、#F9B519に戻す */
 }
 /* —--------------------------- */
 
@@ -71,7 +71,7 @@ main {
 —----------------------------- */
 .center-container {
   padding:50px 100px;
-  background-color:#F3F6C8; /*確認時は#EA9C1B、#F3F6C8に戻すこと*/
+  background-color:#F9B519; /*確認時は#EA9C1B、#F9B519に戻すこと*/
   text-align: center;
 }
 /* —--------------------------- */
@@ -80,7 +80,7 @@ main {
 —----------------------------- */
 .home-icon {
   display: flex;
-  justify-content: center;/*横並びの要素を両端揃えで均等に配置 */
+  justify-content: center;/*横並びの要素を中央揃え */
   max-width: 100px; /* 画像の最大幅 */
   max-height: 100px; /* 画像の最大高さ */
   margin:0 auto 40px;
@@ -119,7 +119,7 @@ main {
   height: 60px;
   border-radius: 30px;
   border: none;
-  background-color: #5F685A;
+  background-color: #343C43;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -127,8 +127,46 @@ main {
 }
 
 .cert-btn:hover {
-  background-color: #919B8C;
+  background-color: #5B676E;
 }
+/* —--------------------------- */
+
+/* 掲示板
+—----------------------------- */
+.bbs-container {
+  display: flex;
+  flex-wrap: wrap; /* .bbs-contentが折り返すように設定 */
+  justify-content: center; /* .bbs-contentを水平方向に中央揃え */
+}
+
+.bbs-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin:0 auto 40px;
+  width: 300px;
+  height: 150px;
+}
+  
+.bbs-content:hover {
+  background-color: #FEC436;
+}
+
+	.top-area {
+	  background-color: #8D989F; /* 上部エリアの背景色 */
+	  border-radius: 10px 10px 0 0; /* 上部の角を丸める */
+	  padding: 10px;
+	  text-align: right;
+	}
+	
+	.bottom-area {
+	  background-color: #fff; /* 下部エリアの背景色 */
+	  border-radius: 0 0 10px 10px; /* 下部の角を丸める */
+	  padding: 24px;
+	  text-align: center;
+	  font-weight: bold;
+	}
 /* —--------------------------- */
 
 /* 本屋大賞通信
@@ -143,7 +181,36 @@ main {
   text-align: center;
 }
 .news-content:hover {
-  background-color: #919B8C;
+  background-color: #FEC436;
+}
+/* —--------------------------- */
+
+/* 並べ替えと検索（掲示板と本棚に使う）
+—----------------------------- */
+.sortSearch-container {
+  display: flex;
+  flex-wrap: wrap; /* このコンテンツ内の要素を折り返すように設定 */
+  justify-content: right; /* このコンテンツ内の要素を水平方向に右揃え */
+}
+
+.sortSearch-container > * {
+  margin-left: 10px; /* 左側の要素との間隔 */
+}
+
+.sortSearch-container > :last-child {
+  margin-left: 0; /* 最後の要素は左側との間隔をなくす */
+}
+
+.search-box {
+    display: inline-block;
+    background-color:#F1F2F3; /* 背景色 */
+    color: #5B676E; /* 文字色 */
+    border-radius: 30px; /* 角を丸くする */
+    padding: 12px 20px; /* 上下の余白、左右の余白 */
+    margin: 10px;
+    border: none; /* ボーダーをなくす */
+    font-size: 16px; /* フォントサイズ */
+    outline: none; /* フォーカス時の枠線を消す */
 }
 /* —--------------------------- */
 
@@ -151,7 +218,7 @@ main {
 —----------------------------- */
 .btn {
   display: inline-block;
-  background: #5F685A; /* 背景色 */
+  background: #343C43; /* 背景色 */
   color: #fff; /* 文字色 */
   padding: 16px 40px; /* 上下の余白、左右の余白 */
   margin: 10px;
@@ -160,6 +227,6 @@ main {
 }
 
 .btn:hover {
-  background-color: #919B8C;
+  background-color: #5B676E;
 }
 /* —--------------------------- */
