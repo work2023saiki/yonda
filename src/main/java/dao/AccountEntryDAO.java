@@ -32,7 +32,7 @@ public class AccountEntryDAO {
     	
       // SELECT文を準備
       String sql = "INSERT INTO アカウント(アカウント名, パスワード, メールアドレス, 秘密の質問, プロフィールID)\r\n"
-      		        + "VALUES (?, ?, ?, ?, -1)";
+      		        + "VALUES (?, ?, ?, ?, 1)";
         
       PreparedStatement pStmt = conn.prepareStatement(sql);
       

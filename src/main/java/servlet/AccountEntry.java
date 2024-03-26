@@ -27,9 +27,15 @@ public class AccountEntry extends HttpServlet {
     AccountBean account = new AccountBean(name, password, mailAd, secret_q);
     
     AccountEntryDAO dao = new AccountEntryDAO();
-	//if(dao.create(account)) {};
-    RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/accountResult.jsp");
-    dispatcher.forward(request, response);
-
-   }
+    boolean a = dao.create(account);
+	if(a) {
+		response.sendRedirect("http://localhost:8080/yonda/accountResult.jsp"); 
+	}
+	
+	else {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/accountEntry.jsp");
+        dispatcher.forward(request, response);
+    }
+	
+  }
 }
