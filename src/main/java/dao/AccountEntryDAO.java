@@ -7,16 +7,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import model.Account;
+import beans.AccountBean;
 
 public class AccountEntryDAO {
   // データベース接続に使用する情報
   private final String JDBC_URL = "jdbc:mysql://localhost:3306/yonda";
   private final String DB_USER = "root";
-  private final String DB_PASS = "moo0921too";
+  private final String DB_PASS = "adminadmin";
 
   
-  public boolean create(Account account) {
+  public boolean create(AccountBean account) {
 	  
 	//JDBCドライバを読み込む
     try {
