@@ -13,6 +13,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/Login")
 public class Login extends HttpServlet {
@@ -39,6 +40,10 @@ public class Login extends HttpServlet {
 	
     //ログイン成功のとき
     else {
+    	//セッションスコープに保存
+    	HttpSession session = request.getSession();
+    	session.setAttribute("account", account);
+    	
     	response.sendRedirect("http://localhost:8080/yonda/myPage.jsp");    //リダイレクトはWEB-INF直下に置く
     }
 	
