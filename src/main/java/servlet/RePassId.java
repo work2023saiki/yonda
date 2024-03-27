@@ -1,4 +1,6 @@
 //「スッキリわかるサーブレット＆JSP入門」P279のコード10-5を参考
+//パスワード変更のための本人確認
+
 
 package servlet;
 
@@ -13,6 +15,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/RePassId")
 public class RePassId extends HttpServlet {
@@ -30,14 +33,10 @@ public class RePassId extends HttpServlet {
     //LoginDAO.javaでname、passwordを使うため、accountに保存。
     AccountBean account = new AccountBean(name, mailAd, secret_q);
     
-    System.out.println(mailAd);
     
     //データベースに接続し、SQL実行。
     RePassIdDAO dao = new RePassIdDAO();
 	List<AccountBean> accountID = dao.findAccount(account);
-	
-	System.out.println(accountID);
-	
 	// ログイン失敗のとき
 	if (accountID.isEmpty()) { 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/rePassIdFailure.jsp");
@@ -46,7 +45,12 @@ public class RePassId extends HttpServlet {
 	
     //ログイン成功のとき
     else {
-    	response.sendRedirect("http://localhost:8080/yonda/rePass.jsp");    //リダイレクトはWEB-INF直下に置く
+    	//セッションスコープに保存
+    	HttpSession session = request.getSession();
+    	session.setAttribute("accountID111", accountID.get(0));  //accountID.get(0)にはaccount3が入っている。
+    	
+    	//リダイレクト
+    	response.sendRedirect("http://localhost:8080/yonda/rePass.jsp");    
     }
 	
   }

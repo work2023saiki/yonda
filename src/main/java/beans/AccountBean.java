@@ -27,6 +27,7 @@ public class AccountBean implements Serializable{
     
   }
   
+  
   //ログイン用
   public AccountBean(String name, String password) {
 	    this.name = name;
@@ -43,7 +44,10 @@ public class AccountBean implements Serializable{
 	    this.mailAd = mailAd;
 	    this.secret_q = secret_q;
   } 
-  
+  //パスワード変更
+  public AccountBean(String password) {
+	    this.password = password;
+  }
   
   //ゲッターとセッター
   public int getAccountId() { return accountID; }
