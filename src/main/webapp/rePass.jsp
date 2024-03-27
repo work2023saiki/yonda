@@ -25,7 +25,7 @@
       <h2>パスワードの再設定</h2>
       <form action="RePass" method="post">
         <input type="password" name="password" class="input-field" placeholder="新しいパスワード">
-        <input type="password" name="password" class="input-field" placeholder="新しいパスワードの確認"><br>
+        <input type="password" name="password2" class="input-field" placeholder="新しいパスワードの確認"><br>
         <button type="submit" class="cert-btn">OK</button>
     </div>
   </main>
