@@ -5,39 +5,35 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>読書記録の編集</title>
+<title>yonda！</title>
 </head>
 <body>
-<header>
-	<div class="header-logo">yonda！</div>
-	<div class="header-list">
-		<ul>
-		<li><a href="bbs.jsp">掲示板</a></li>
-		<li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
-		</ul>
-	</div>
-</header>
+  <header>
+    <h1>
+      <a href="index.jsp">yonda！</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="bbs.jsp">掲示板</a></li>
+        <li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
 
 <h1>読書記録の編集</h1>
-<p>タイトル1<br>
-作者、出版社<br>
-ジャンル<br>
-媒体<br>
-金額<br>
-版数<br>
-訳者<br>
-感想<br>
-入手日<br>
-開始日<br>
-終了日<br>
-回数<br>
-読書状況<br>
-メモ<br>
-公開</p>
-<input type="submit" value="保存"><br>
+<p>タイトル<p>
+<p>作者、出版社</p>
+<p>読書状況</p>
+      <form action="readingrec" method="post">
+        <input type="submit" class="btn" value="保存">
+      </form>
+
 <a href="readingRec.jsp">読書記録に戻る</a><br>
 <a href="bookShelf.jsp">本棚</a><br>
 <a href="myPage.jsp">マイページ</a><br>
 <a href="logout.jsp">ログアウト</a><br>
+</main>
 </body>
 </html>

@@ -1,22 +1,72 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>プロフィール</title>
+<title>yonda！</title>
 </head>
+
 <body>
-<header>
-	<div class="header-logo">yonda！</div>
-	<div class="header-list">
-		<ul>
-		<li><a href="bbs.jsp">掲示板</a></li>
-		<li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
-		</ul>
-	</div>
-</header>
+  <header>
+    <h1>
+      <a href="index.jsp">yonda！</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="bbs.jsp">掲示板</a></li>
+        <li><a href="hontaiNews.jsp">本屋大賞通信</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+  
+	  <div class="top-container">
+	  	<a href="myPage.jsp"><img src="./img/myicon.png" alt="マイページ"></a>
+    	<a href="bookShelf.jsp" class="btn">本棚</a>
+    	
+	  </div>
+    	<h3>プロフィール</h3>
+		<a href="profileEdit.jsp" class="btn">編集</a>
+    	<table class="bookshelf-table">
+		    <tr>
+		        <th>生年月日</th>
+		        <td>1990/1/1</td>
+		    </tr>
+		    <tr>
+		        <th>性別</th>
+		        <td>男</td>
+		    </tr>
+		    <tr>
+		        <th>職業</th>
+		        <td>会社員</td>
+		    </tr>
+		    <tr>
+		        <th>在住都道府県</th>
+		        <td>熊本県</td>
+		    </tr>
+		    <tr>
+		        <th>パーソナルタグ</th>
+		        <td></td>
+		    </tr>
+		    <tr>
+		        <th>興味のあるジャンル</th>
+		        <td>ミステリー/海外/古典</td>
+		    </tr>
+		    <tr>
+		        <th>タイトル</th>
+		        <td>作者</td>
+		    </tr>
+		    <tr>
+		        <th>タイトル</th>
+		        <td>作者</td>
+		    </tr>
+		</table>
+
+</main>
 
 <h1>プロフィール</h1>
 <p>アカウント名1<br>
