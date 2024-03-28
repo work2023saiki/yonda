@@ -53,16 +53,16 @@
 		    </tr>
 		    <tr>
 		        <td>傲慢と善良</td>
-		        <td>辻村深月</td>
+		        <td>${ readingRecList0.title }</td>
 		        <td>いま読んでいる</td>
 		    </tr>
 		    <tr>
-		        <td>告白</td>
+		        <td>${ readingRecList1.title }</td>
 		        <td>湊かなえ</td>
 		        <td>読み終わった</td>
 		    </tr>
 		    <tr>
-		        <td>キャッチャー・イン・ザ・ライ</td>
+		        <td>${ readingRecList2.title }</td>
 		        <td>J・D・サリンジャー</td>
 		        <td>いま読んでいる</td>
 		    </tr>

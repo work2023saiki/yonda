@@ -3,10 +3,13 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import beans.AccountBean;
+import beans.ReadingRecBean;
 import dao.LoginDAO;
+import dao.ReadingRecAddDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -45,6 +48,19 @@ public class Login extends HttpServlet {
     	//セッションスコープに保存。 myPage.jspや本棚でEL式を使うため。
     	HttpSession session = request.getSession();
     	session.setAttribute("account", account);
+    	
+    	ReadingRecAddDAO dao2= new ReadingRecAddDAO();
+    	List<ReadingRecBean> readingRecList = dao2.findAll();
+    	
+    	
+    	//セッションスコープに保存。
+    	ArrayList<HttpSession> session3 = new ArrayList<HttpSession>();
+    	    	
+    	for(int i=0; i<readingRecList.size(); i++) { 
+    		session3.add(session);
+            session3.get(i).setAttribute("readingRecList" + String.valueOf(i), readingRecList.get(i));
+      	}
+    	//System.out.println(readingRecList);
     	
     	response.sendRedirect("http://localhost:8080/yonda/myPage.jsp");    //リダイレクトはWEB-INF直下に置く
     }

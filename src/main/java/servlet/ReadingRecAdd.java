@@ -11,7 +11,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/ReadingRecAdd")
 public class ReadingRecAdd extends HttpServlet {
@@ -36,10 +35,11 @@ public class ReadingRecAdd extends HttpServlet {
 		List<ReadingRecBean> readingRecList = dao.findAll();
 		System.out.println(readingRecList);
 		//セッションスコープに保存
-    	HttpSession session = request.getSession();
-    	session.setAttribute("readingRecList", readingRecList.get(0));
-    	System.out.println(readingRecList.get(0).getTitle());
-		
+    	//HttpSession session = request.getSession();
+    	//for(int i=0; i<readingRecList.size(); i++) { 
+    	//  session.setAttribute("readingRecList" + String.valueOf(i), readingRecList.get(i));
+    	//}
+    	
 		response.sendRedirect("http://localhost:8080/yonda/readingRecAddResult.jsp"); 
 	}
 	
