@@ -53,6 +53,12 @@ public class Login extends HttpServlet {
     	List<ReadingRecBean> readingRecList = dao2.findAll();
     	
     	
+    	ReadingRecBean readStatusLength = new ReadingRecBean(readingRecList.size());
+    	
+    	
+    	HttpSession session4 = request.getSession();
+    	session4.setAttribute("Length", readStatusLength);
+    	
     	//セッションスコープに保存。
     	ArrayList<HttpSession> session3 = new ArrayList<HttpSession>();
     	    	

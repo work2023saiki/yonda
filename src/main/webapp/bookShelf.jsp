@@ -51,11 +51,16 @@
 		        <td>東野圭吾</td>
 		        <td>感想を書いた</td>
 		    </tr>
+		    
+		    <% for (int i = 0; i < ${Length.readStatusLength}  ; i++){  %>
 		    <tr>
 		        <td>傲慢と善良</td>
-		        <td>${ readingRecList0.title }</td>
+		        <td>${ readingRecList.title }</td>
 		        <td>いま読んでいる</td>
 		    </tr>
+		    <% } %>
+		    
+		    
 		    <tr>
 		        <td>${ readingRecList1.title }</td>
 		        <td>湊かなえ</td>
