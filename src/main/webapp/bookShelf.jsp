@@ -26,17 +26,19 @@
   
 	  <div class="top-container">
 	  	<a href="myPage.jsp"><img src="./img/myicon.png" alt="マイページ"></a>
-	  	<h2>${account.name}さん</h2>
+	  	<h3>${account.name}さん</h3>
+    	<a href="bookShelf.jsp" class="btn">本棚</a>
     	<a href="profile.jsp" class="btn">プロフィール</a>
-    	
 	  </div>
-    	<h3>本棚</h3>
-    		<a href="readingRecAdd.jsp" class="btn">本を追加</a>
-    		<div class="sortSearch-container">
-				<div class="btn">並べ替え</div>
-				<input type="text" class="search-box" placeholder="キーワードを入力">
-				<div class="btn">検索</div>
-			</div>
+	  
+	<h2>本棚</h2>
+
+	<div class="sortSearch-container">
+		<div class="sortSearch-btn">並べ替え</div>
+		<input type="text" class="search-box" placeholder="キーワードを入力">
+		<div class="sortSearch-btn">検索</div>
+	</div>
+
     	
     	<table class="bookshelf-table">
 		    <tr>
@@ -94,6 +96,9 @@
 		        <td>読みたい</td>
 		    </tr>
 		</table>
+		
+	<a href="readingRecAdd.jsp" class="btn">本を追加</a><br>
+	<a href="logout.jsp" class="logout-btn">ログアウト</a>	
 
 </main>
 </body>

@@ -26,11 +26,13 @@
   
 	  <div class="top-container">
 	  	<a href="myPage.jsp"><img src="./img/myicon.png" alt="マイページ"></a>
+	  	<h3>${account.name}さん</h3>
     	<a href="bookShelf.jsp" class="btn">本棚</a>
-    	
+    	<a href="profile.jsp" class="btn">プロフィール</a>
 	  </div>
-    	<h3>プロフィール</h3>
-		<a href="profileEdit.jsp" class="btn">編集</a>
+	  
+    	<h2>プロフィール</h2>
+
     	<table class="bookshelf-table">
 		    <tr>
 		        <th>生年月日</th>
@@ -50,37 +52,25 @@
 		    </tr>
 		    <tr>
 		        <th>パーソナルタグ</th>
-		        <td></td>
+		        <td>#文学青年#歴史#SE</td>
 		    </tr>
 		    <tr>
 		        <th>興味のあるジャンル</th>
 		        <td>ミステリー/海外/古典</td>
 		    </tr>
 		    <tr>
-		        <th>タイトル</th>
-		        <td>作者</td>
+		        <th>好きな作家</th>
+		        <td>東野圭吾</td>
 		    </tr>
 		    <tr>
-		        <th>タイトル</th>
-		        <td>作者</td>
+		        <th>お気に入りベスト3</th>
+		        <td>容疑者Xの献身/沈黙/星の王子さま</td>
 		    </tr>
 		</table>
-
+		
+		<a href="profileEdit.jsp" class="btn">編集</a><br>
+		<a href="logout.jsp" class="logout-btn">ログアウト</a>
+		
 </main>
-
-<h1>プロフィール</h1>
-<p>アカウント名1<br>
-性別<br>
-生年月日<br>
-職業<br>
-在住都道府県<br>
-パーソナルタグ<br>
-興味のあるジャンル<br>
-好きな作家<br>
-お気に入りの本ベスト3</p>
-<input type="submit" value="編集"><br>
-<a href="bookShelf.jsp">本棚</a><br>
-<a href="myPage.jsp">マイページ</a><br>
-<a href="logout.jsp">ログアウト</a><br>
 </body>
 </html>

@@ -22,9 +22,9 @@
   <main>
     <h2>掲示板</h2>
 		<div class="sortSearch-container">
-			<div class="btn">並べ替え</div>
+			<div class="sortSearch-btn">並べ替え</div>
 			<input type="text" class="search-box" placeholder="キーワードを入力">
-			<div class="btn">検索</div>
+			<div class="sortSearch-btn">検索</div>
 		</div>
       <div class="bbs-container">
 	      <div class="bbs-content">

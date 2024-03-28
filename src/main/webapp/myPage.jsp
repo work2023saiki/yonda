@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
-<title>マイページ</title>
+<title>yonda！</title>
 </head>
 
 <body>
@@ -23,29 +23,43 @@
   </header>
   
   <main>
-    <h2>abcdさん</h2>
-    <ul>
-      <li><a href="bookShelf.jsp">本棚</a></li>
-      <li><a href="profile.jsp">プロフィール</a></li>
-    </ul>
-    <div>読書状況</div>
-        <ul>
-          <li>すべて<br>147</li>
-          <li>読みたい<br>3</li>
-          <li>積読<br>5</li>
-        </ul>
-        <ul>
-          <li>今読んでいる<br>2</li>
-          <li>読了<br>105</li>
-          <li>感想を書いた<br>32</li>
-        </ul>
-    <div>友達</div>
-      <ul>
-          <li>フォロー<br>86</li>
-          <li>フォロワー<br>31</li>
-          <li>いいねされた感想<br>15</li>
-        </ul>
-    <div>今週のランキング</div>
+	  <div class="top-container">
+	  	<a href="myPage.jsp"><img src="./img/myicon.png" alt="マイページ"></a>
+	  	<h3>${account.name}さん</h3>
+    	<a href="bookShelf.jsp" class="btn">本棚</a>
+    	<a href="profile.jsp" class="btn">プロフィール</a>
+	  </div>
+
+  	<h3>読書状況　　　161</h3>
+  	<table class="rounded-table">
+	    <tr>
+	        <td><b>未登録</b><br>3</td>
+	        <td><b>読みたい</b><br>14</td>
+	        <td><b>積読</b><br>5</td>
+	    </tr>
+	    <tr>
+	        <td><b>いま読んでいる</b><br>2</td>
+	        <td><b>読み終わった</b><br>105</td>
+	        <td><b>感想を書いた</b><br>32</td>
+	    </tr>
+	</table>
+
+    	<h3>友達</h3>
+    	<table class="rounded-table">
+		    <tr>
+		        <td><b>フォロー</b><br>86</td>
+		        <td><b>フォロワー</b><br>31</td>
+		        <td><b>いいねされた数</b><br>15</td>
+		    </tr>
+		</table>
+    	<h3>今週のランキング</h3>
+    	<div class="ranking-content">1位　変な家　雨穴</div>
+    	<div class="ranking-content">2位　なぜ働いていると本が読めなくなるのか　三宅香帆</div>
+    	<div class="ranking-content">3位　あいにくあんたのためじゃない　柚木麻子</div>
+    	<div class="ranking-content">4位　ｓｐｒｉｎｇ　恩田陸</div>
+    	<div class="ranking-content">5位　きみのお金は誰のため: ボスが教えてくれた「お金の謎」と「社会のしくみ」　田内学</div>
+
+	<a href="logout.jsp" class="logout-btn">ログアウト</a>	
   </main>
 </body>
 </html>
