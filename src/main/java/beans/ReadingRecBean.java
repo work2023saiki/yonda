@@ -14,7 +14,7 @@ public class ReadingRecBean implements Serializable{
   
   public ReadingRecBean() { }
   
-  //本棚に本を登録
+  //本棚に本を新規登録
   public ReadingRecBean(String title, String author, String readStatus) {
     this.title = title;
     this.author = author;

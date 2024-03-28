@@ -16,18 +16,18 @@ public class RePassIdDAO {
   // データベース接続に使用する情報
   private final String JDBC_URL = "jdbc:mysql://localhost:3306/yonda";
   private final String DB_USER = "root";
-  private final String DB_PASS = "adminadmin";
+  private final String DB_PASS = "moo0921too";
 
   
-  public List<AccountBean> findAccount(AccountBean account) {
+  public List<AccountBean> findAccountID(AccountBean account) {
 	  
-    List<AccountBean> accountList = new ArrayList<>();
+    List<AccountBean> accountIDList = new ArrayList<>();
     
 	//JDBCドライバを読み込む
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
     }
-    //JDBCドライバが読み込めない（try文の中でエラーが出た）とき実行する    
+    //JDBCドライバが読み込めないとき実行する    
     catch (ClassNotFoundException e) {
         throw new IllegalStateException("JDBCドライバを読み込めませんでした");
     }
@@ -53,7 +53,7 @@ public class RePassIdDAO {
 	      while (rs.next()) {
 	        int ID = rs.getInt("アカウントID");
 	        AccountBean account3 = new AccountBean(ID);
-	        accountList.add(account3);
+	        accountIDList.add(account3);
 	      }
     }  
       //tryの中でエラーが出たら、catchのみ実行する
@@ -63,6 +63,7 @@ public class RePassIdDAO {
     }
     
   //アカウントIDを取得できたとき
-  return accountList;
+  return accountIDList;      //accountIDListリストにaccount3が1つ格納されている。
+                           //account3インスタンスの中にアカウントIDが入っている状態。
   }
 }

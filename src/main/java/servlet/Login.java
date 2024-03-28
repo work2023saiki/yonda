@@ -25,22 +25,24 @@ public class Login extends HttpServlet {
     String name = request.getParameter("name");
     String password = request.getParameter("password");
     
-    //LoginDAO.javaでname、passwordを使うため、accountに保存。
+    //入力情報をaccountインスタンスに保存。
     AccountBean account = new AccountBean(name, password);
     
-    //データベースに接続し、SQL実行。
+    //データベースに接続。アカウントIDを見つけて取得する。
     LoginDAO dao = new LoginDAO();
-	List<AccountBean> accountID = dao.findAccount(account);
+	List<AccountBean> accountID = dao.findAccountID(account);
 	
-	// ログイン失敗のとき
+	// アカウントIDが見つからず、取得できなかったとき。
+	// ログイン失敗
 	if (accountID.isEmpty()) { 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/loginFailure.jsp");
         dispatcher.forward(request, response);   //フォワードはjspフォルダ内に置く
 	}   
 	
-    //ログイン成功のとき
+	//アカウントIDが見つかったとき
+    //ログイン成功
     else {
-    	//セッションスコープに保存
+    	//セッションスコープに保存。 myPage.jspや本棚でEL式を使うため。
     	HttpSession session = request.getSession();
     	session.setAttribute("account", account);
     	
