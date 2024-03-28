@@ -20,34 +20,37 @@
       </ul>
     </nav>
   </header>
-  
   <main>
-  
 	  <div class="top-container">
 	  	<a href="myPage.jsp"><img src="./img/myicon.png" alt="マイページ"></a>
+	  	<h3>${account.name}さん</h3>
     	<a href="bookShelf.jsp" class="btn">本棚</a>
-    	
+    	<a href="profile.jsp" class="btn">プロフィール</a>
 	  </div>
-    	<h3>プロフィールの編集</h3>
+	  
+    	<h2>プロフィールの編集</h2>
+
 	    	<form action="profile" method="post">
-	        	<input type="submit" class="btn" value="保存">
+
+
+   	<table class="bookshelf-table">
+	        <input type="text" name="birthday" class="input-field" placeholder="生年月日">
+	        <input type="text" name="gender" class="input-field" placeholder="性別">
+	        <input type="text" name="title" class="input-field" placeholder="タイトル">
+	        <input type="text" name="author" class="input-field" placeholder="作者">
+	        <input type="text" name="title" class="input-field" placeholder="タイトル">
+	        <input type="text" name="author" class="input-field" placeholder="作者">
+	        <input type="text" name="title" class="input-field" placeholder="タイトル">
+	        <input type="text" name="author" class="input-field" placeholder="作者">
+	        <input type="text" name="title" class="input-field" placeholder="タイトル">
+	        <input type="text" name="author" class="input-field" placeholder="作者">
+	        <input type="text" name="author" class="input-field" placeholder="作者">
+	        	<input type="submit" class="crt-btn" value="保存">
 	      	</form>
+		
+		<a href="profileEdit.jsp" class="btn">編集</a><br>
+		<a href="logout.jsp" class="logout-btn">ログアウト</a>
 
-<p>アカウント名1<br>
-性別<br>
-生年月日<br>
-職業<br>
-在住都道府県<br>
-パーソナルタグ<br>
-興味のあるジャンル<br>
-好きな作家<br>
-お気に入りの本ベスト3</p>
-
-
-<a href="profile.jsp">プロフィールに戻る</a><br>
-<a href="bookShelf.jsp">本棚</a><br>
-<a href="myPage.jsp">マイページ</a><br>
-<a href="logout.jsp">ログアウト</a><br>
 </main>
 </body>
 </html>

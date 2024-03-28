@@ -29,20 +29,10 @@
     	<a href="profile.jsp" class="btn">プロフィール</a>
 	  </div>
     
-        <h2>読書記録を追加</h2>
-      	<form action="readingRecAdd" method="post">
-	        <input type="text" name="title" class="input-field" placeholder="タイトル">
-	        <input type="text" name="author" class="input-field" placeholder="作者">
-	        <select name="readStatus" class="input-field" placeholder="読書状況">
-				<option value="サンプル1">未登録</option>
-				<option value="サンプル2">読みたい</option>
-				<option value="サンプル3">積読</option>
-				<option value="サンプル1">いま読んでいる</option>
-				<option value="サンプル2">読み終わった</option>
-				<option value="サンプル3">感想を書いた</option>
-			</select><br>
-	        <button type="submit" class="cert-btn">OK</button>
-	     </form>
+    <div class="center-container">
+      <p>本の追加完了</P>
+      <a href="bookShelf.jsp" class="btn">本棚</a>
+    </div>
   </main>
 </body>
 </html>

@@ -79,20 +79,11 @@ main {
 /* 上部のコンテナ（マイページ以降）
 —----------------------------- */
 .top-container {
-  max-width: 600px;
+  width: 100%;
   height:150px;
-  background-color:#F9B519; /*確認時は#EA9C1B、#F9B519に戻すこと*/
+
   display: flex;
   align-items: center; /* 垂直方向の中央揃え */
-  justify-content: space-between; /* 両端揃え */
-}
-
-.top-container > :nth-child(-n+2) {
-  margin-right: auto; /* 最初の2つの要素を左寄せ */
-}
-
-.top-container > :nth-last-child(-n+2) {
-  margin-left: auto; /* 最後の2つの要素を右寄せ */
 }
 
 .top-container img {
@@ -213,6 +204,7 @@ main {
 /* 並べ替えと検索（掲示板と本棚に使う）
 —----------------------------- */
 .sortSearch-container {
+  max-width: 900px;
   display: flex;
   flex-wrap: wrap; /* このコンテンツ内の要素を折り返すように設定 */
   justify-content: right; /* このコンテンツ内の要素を水平方向に右揃え */
@@ -230,12 +222,26 @@ main {
     display: inline-block;
     background-color:#F1F2F3; /* 背景色 */
     color: #5B676E; /* 文字色 */
-    border-radius: 30px; /* 角を丸くする */
-    padding: 12px 20px; /* 上下の余白、左右の余白 */
+    border-radius: 10px; /* 角を丸くする */
+    padding: 10px 20px; /* 上下の余白、左右の余白 */
     margin: 10px;
     border: none; /* ボーダーをなくす */
-    font-size: 16px; /* フォントサイズ */
+    font-size: 14px; /* フォントサイズ */
     outline: none; /* フォーカス時の枠線を消す */
+}
+
+.sortSearch-btn{
+  display: inline-block;
+  background: #5B676E; /* 背景色 */
+  color: black; /* 文字色 */
+  padding: 10px 20px; /* 上下の余白、左右の余白 */
+  margin: 10px;
+  text-decoration: none; /* デフォルトで入るリンクの下線を消す */
+  border-radius: 10px; /* 角を丸くする */
+}
+
+.sortSearch-btn:hover {
+  background-color: #8D989F;
 }
 /* —--------------------------- */
 
@@ -244,7 +250,8 @@ main {
 /* 角丸のテーブル
 —----------------------------- */
 .rounded-table {
-    width: 500px; /* テーブルの幅 */
+    max-width: 100%; /* 最大幅を100%に設定 */
+    width: auto; /* 幅を自動調整 */
     border-collapse: collapse; /* セルのボーダーを結合 */
     border-radius: 10px; /* テーブル全体の角を丸くする */
     overflow: hidden; /* 角丸の部分を隠す */
@@ -299,7 +306,8 @@ main {
 /* 本棚のテーブル
 —----------------------------- */
 .bookshelf-table {
-    width: 600px; /* テーブルの幅 */
+    max-width: 100%; /* 最大幅を100%に設定 */
+    width: auto; /* 幅を自動調整 */
     border-collapse: collapse; /* セルのボーダーを結合 */
     border-radius: 10px; /* テーブル全体の角を丸くする */
     overflow: hidden; /* 角丸の部分を隠す */
@@ -314,7 +322,6 @@ main {
     text-align: center; /* テキストを中央揃え */
     width: calc(100% / 3); /* 3列に均等に分割 */
     height: 50%; /* 2行に均等に分割 */
-    background-color:#8D989F;
 }
 
 .bookshelf-table td {
@@ -357,5 +364,22 @@ main {
 
 .btn:hover {
   background-color: #5B676E;
+}
+/* —--------------------------- */
+
+/* ログアウトボタン
+—----------------------------- */
+.logout-btn {
+  display: inline-block;
+  background: #B37601; /* 背景色 */
+  color: #fff; /* 文字色 */
+  padding: 16px 40px; /* 上下の余白、左右の余白 */
+  margin: 10px;
+  text-decoration: none; /* デフォルトで入るリンクの下線を消す */
+  border-radius: 30px; /* 角を丸くする */
+}
+
+.logout-btn:hover {
+  background-color: #D89301;
 }
 /* —--------------------------- */

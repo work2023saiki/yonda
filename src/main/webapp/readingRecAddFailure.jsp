@@ -30,6 +30,7 @@
 	  </div>
     
         <h2>読書記録を追加</h2>
+      <p><font color="red">追加できませんでした<br>すべての項目を入力してください</font>        
       	<form action="readingRecAdd" method="post">
 	        <input type="text" name="title" class="input-field" placeholder="タイトル">
 	        <input type="text" name="author" class="input-field" placeholder="作者">
