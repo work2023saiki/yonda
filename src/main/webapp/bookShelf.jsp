@@ -47,7 +47,7 @@
 		        <th>読書状況</th>
 		    </tr>
 		    <tr>
-		        <td>容疑者Xの献身</td>
+		        <td><a href="readingRec.jsp">容疑者Xの献身</a></td>
 		        <td>東野圭吾</td>
 		        <td>感想を書いた</td>
 		    </tr>

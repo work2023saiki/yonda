@@ -31,7 +31,6 @@
     
     <div class="center-container">
       <p>本の追加完了</P>
-      <a href="bookShelf.jsp" class="btn">本棚</a>
     </div>
   </main>
 </body>
