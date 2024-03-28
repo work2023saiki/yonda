@@ -35,7 +35,8 @@ public class ReadingRecAdd extends HttpServlet {
 		System.out.println(readingRecList);
 		//セッションスコープに保存
     	HttpSession session = request.getSession();
-    	session.setAttribute("readingRecList", readingRecList);
+    	session.setAttribute("readingRecList", readingRecList.get(0));
+    	System.out.println(readingRecList.get(0).getTitle());
 		
 		response.sendRedirect("http://localhost:8080/yonda/readingRecAddResult.jsp"); 
 	}
