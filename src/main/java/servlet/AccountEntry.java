@@ -27,11 +27,14 @@ public class AccountEntry extends HttpServlet {
     AccountBean account = new AccountBean(name, password, mailAd, secret_q);
     
     AccountEntryDAO dao = new AccountEntryDAO();
-    boolean a = dao.create(account);
-	if(a) {
+    boolean newAccount = dao.create(account);   //dao.create(account)がTrueで、アカウント登録される。
+	
+    //登録OK
+    if(newAccount) {
 		response.sendRedirect("http://localhost:8080/yonda/accountResult.jsp"); 
 	}
 	
+    //登録できないとき
 	else {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/accountEntryFailure.jsp");
         dispatcher.forward(request, response);

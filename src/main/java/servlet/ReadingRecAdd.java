@@ -11,7 +11,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/ReadingRecAdd")
 public class ReadingRecAdd extends HttpServlet {
@@ -24,22 +23,22 @@ public class ReadingRecAdd extends HttpServlet {
     String author = request.getParameter("author");
     String readStatus = request.getParameter("readStatus");
     
-    
+    //入力情報をインスタンスに保存
     ReadingRecBean readingRec = new ReadingRecBean(title, author, readStatus);
     
     ReadingRecAddDAO dao = new ReadingRecAddDAO();
-    boolean a = dao.create(readingRec);
-	if(a) {
+    boolean Rec = dao.create(readingRec);
+    
+    //追加できたとき
+	if(Rec) {
 		
 		List<ReadingRecBean> readingRecList = dao.findAll();
 		System.out.println(readingRecList);
-		//セッションスコープに保存
-    	HttpSession session = request.getSession();
-    	session.setAttribute("readingRecList", readingRecList);
 		
 		response.sendRedirect("http://localhost:8080/yonda/readingRecAddResult.jsp"); 
 	}
 	
+	//追加できなかったとき
 	else {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/readingRecAddFailure.jsp");
         dispatcher.forward(request, response);

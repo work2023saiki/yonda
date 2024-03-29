@@ -25,14 +25,18 @@ public class RePass extends HttpServlet {
     
     AccountBean account5 = new AccountBean(password);
 	
+    //パスワードが一致していたら
     if(password.equals(password2)){
-    	//セッションスコープからアカウントIDが入ったインスタンスを取得。
-    	//RePassIdDAOで取得したアカウントIDを、RePassDAOで使用。
+    	//セッションスコープからインスタンスを取得。
+    	//RePassIdDAOで取得したアカウントIDを使用。
     	HttpSession session = request.getSession();
         AccountBean accountID = (AccountBean)session.getAttribute("accountID111");
         
         RePassDAO dao = new RePassDAO();
-    	dao.rePass(account5, accountID); 
+    	dao.rePass(account5, accountID);   //パスワードを再設定する。
+    	
+    	//不要となったセッションスコープ内のインスタンスを削除
+    	session.removeAttribute("accountID111");
     	
     	response.sendRedirect("http://localhost:8080/yonda/rePassResult.jsp");
     }

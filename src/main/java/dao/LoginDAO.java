@@ -19,9 +19,9 @@ public class LoginDAO {
   private final String DB_PASS = "adminadmin";
 
   
-  public List<AccountBean> findAccount(AccountBean account) {
+  public List<AccountBean> findAccountID(AccountBean account) {
 	  
-    List<AccountBean> accountList = new ArrayList<>();
+    List<AccountBean> accountIDList = new ArrayList<>();
 	//JDBCドライバを読み込む
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -34,7 +34,8 @@ public class LoginDAO {
     // データベースへ接続
     try (Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
     	
-      // SELECT文を準備
+      // SELECT文を準備。
+      // アカウントテーブルからアカウント名が一致し、パスワードも一致するアカウントIDを表示。
       String sql = "SELECT アカウントID FROM アカウント WHERE アカウント名=? AND パスワード=?";
         
       PreparedStatement pStmt = conn.prepareStatement(sql);
@@ -47,21 +48,22 @@ public class LoginDAO {
       // SELECTを実行し、結果表を取得
       ResultSet rs = pStmt.executeQuery();
       
-	      // 結果表に格納されたレコードの内容を
-	      // empListに追加
+	      // 結果表にあるアカウントIDをaccount2インスタンスに保存して、
+	      // accountIDListに追加
 	      while (rs.next()) {
 	        int ID = rs.getInt("アカウントID");
 	        AccountBean account2 = new AccountBean(ID);
-	        accountList.add(account2);
+	        accountIDList.add(account2);
 	      }
     }  
       //tryの中でエラーが出たら、catchのみ実行する
     catch (SQLException e) {
       e.printStackTrace();
-      return null;
-    }
+      return null;       //Login.javaの33行目、dao.findAccountID(account)にnullが入る。
+    }                    //accountIDにnullが入ってログイン失敗となる。
     
   //アカウントIDを取得できたとき
-  return accountList;
+  return accountIDList;   //accountIDListリストにaccount2が1つ格納されている。
+                          //account2インスタンスの中にアカウントIDが入っている状態。
   }
 }

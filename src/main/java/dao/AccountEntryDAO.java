@@ -22,7 +22,7 @@ public class AccountEntryDAO {
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
     }
-    //JDBCドライバが読み込めない（try文の中でエラーが出た）とき実行する    
+    //JDBCドライバが読み込めないとき実行する    
     catch (ClassNotFoundException e) {
         throw new IllegalStateException("JDBCドライバを読み込めませんでした");
     }
