@@ -52,22 +52,21 @@
 		        <td>感想を書いた</td>
 		    </tr>
 		    
-		    <% for (int i = 0; i < ${Length.readStatusLength}  ; i++){  %>
 		    <tr>
 		        <td>傲慢と善良</td>
-		        <td>${ readingRecList.title }</td>
+		        <td>辻村深月</td>
 		        <td>いま読んでいる</td>
 		    </tr>
-		    <% } %>
+		    
 		    
 		    
 		    <tr>
-		        <td>${ readingRecList1.title }</td>
+		        <td>告白</td>
 		        <td>湊かなえ</td>
 		        <td>読み終わった</td>
 		    </tr>
 		    <tr>
-		        <td>${ readingRecList2.title }</td>
+		        <td>キャッチャー・イン・ザ・ライ</td>
 		        <td>J・D・サリンジャー</td>
 		        <td>いま読んでいる</td>
 		    </tr>
