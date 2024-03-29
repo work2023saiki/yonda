@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="beans.ReadingRecBean" %>    
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List"%>   
     
+<%
+//セッションスコープに保存されたデータを取得
+ List<ReadingRecBean> readingRecList = (List<ReadingRecBean>)session.getAttribute("readingRecList");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +54,17 @@
 		        <th>作者</th>
 		        <th>読書状況</th>
 		    </tr>
-		    <tr>
+		    
+		    <%for(int i = 0; i < readingRecList.size(); i++){%>
+	            <%ReadingRecBean book = (ReadingRecBean)readingRecList.get(i);%>
+	            <tr>
+	                <td><%=book.getTitle()%></td>
+	                <td><%=book.getAuthor()%></td>
+	                <td><%=book.getReadStatus()%></td>
+		        </tr>
+	        <% } %>
+	        
+			<tr>
 		        <td><a href="readingRec.jsp">容疑者Xの献身</a></td>
 		        <td>東野圭吾</td>
 		        <td>感想を書いた</td>
